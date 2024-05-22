@@ -11,13 +11,21 @@ export default class  Envio extends Component{
     }
 
 
+
     render(){
         return(
             <div className="Envio">
-                Materia:  <input type="text" />
-                Nota:     <input type="text" />
-                <button>Enviar</button>
-                {this.props.ejemplo()}
+                Materia:  <input type="text" 
+                 value={this.state.materia}
+                 onChange={(e) => this.setState({ materia : e.target.value})}
+                />
+                Nota:     <input type="text"
+                value={this.state.nota}
+                onChange={(e) => this.setState({ nota : e.target.value})}
+                
+                />
+                <button onClick={() => this.props.guardar(this.state.materia, this.state.nota)}>Guardar</button>
+                {/* {this.props.ejemplo()} */}
 
 
             </div>
