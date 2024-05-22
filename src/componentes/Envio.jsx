@@ -4,6 +4,8 @@ export default class  Envio extends Component{
     constructor(props){
         super(props)
         this.state={
+            materia:'',
+            nota: 0
 
         }
     }
@@ -12,10 +14,12 @@ export default class  Envio extends Component{
     render(){
         return(
             <div className="Envio">
-                Materia: <input type="text" />
-                Nota: <input type="text" />
+                Materia:  <input type="text" />
+                Nota:     <input type="text" />
                 <button>Enviar</button>
                 {this.props.ejemplo()}
+
+
             </div>
         )
     }
