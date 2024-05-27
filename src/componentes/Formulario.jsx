@@ -14,6 +14,7 @@ render (){
       
         <div className="promedio">
             <h1>Promedio:</h1>
+            
            
 
         </div>

@@ -7,13 +7,25 @@ export default class App extends Component{
     constructor(props){
         super(props)
         this.state={
-            materias: []
+            materias: [],
+            promedio: 0
         }
     }
+     calcularpromedio(notas){
+        this.state.materias.reduce(materia) , ((acumulador, notas)=>
+         acumulador + notas,
+         0
+    )
+        
+     }
      guardar(materia, nota){
         let nuevasmasterias = this.state.materias
-        nuevasmasterias.push[materia, nota]
+        nuevasmasterias.push({materia, nota})
         this.setState({materias: nuevasmasterias})
+
+    }
+
+    eliminar(){
 
     }
 

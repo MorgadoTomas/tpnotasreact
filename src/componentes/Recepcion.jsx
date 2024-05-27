@@ -14,11 +14,12 @@ import { Component } from "react";
 render(){
     return(
         <div>
-            <h1>Materia: {this.state.materia}</h1>
+            <h1>Materia: {this.props.materia}</h1>
             Nota:<input type="text"
-            value={this.state.nota}
+            value={this.props.nota}
             onChange={(e) => this.setState({ nota : e.target.value})}
             />
+
         </div>
     )
 }
