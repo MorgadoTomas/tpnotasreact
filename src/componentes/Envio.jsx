@@ -10,8 +10,6 @@ export default class  Envio extends Component{
         }
     }
 
-
-
     render(){
         return(
             <div className="Envio">
@@ -25,7 +23,7 @@ export default class  Envio extends Component{
                 
                 />
                 <button onClick={() => this.props.guardar(this.state.materia, this.state.nota)}>Guardar</button>
-                {/* {this.props.ejemplo()} */}
+               
 
 
             </div>

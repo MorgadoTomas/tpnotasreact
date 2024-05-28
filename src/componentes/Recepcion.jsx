@@ -1,26 +1,28 @@
-import { Component } from "react";
- export default class Recepcion extends Component{
-    constructor(props){
-        super(props)
-        this.state={
+import React, { Component } from 'react';
 
-        }
+export default class Recepcion extends Component {
+    cambiar = (index, e) => {
+        const nuevaNota = e.target.value;
+        this.props.actualizarNota(index, nuevaNota);
+    };
+
+    render() {
+        return (
+            <div>
+                {this.props.materias.map((materia, index) => (
+                    <div key={index}>
+                        <h2>Materia: {materia.materia}</h2>
+                        <p>Nota: 
+                            <input 
+                                type="text" 
+                                value={materia.nota} 
+                                onChange={(e) => this.cambiar(index, e)} 
+                            />
+                        </p>
+                    </div>
+                ))}
+                <h2>Promedio: {this.props.promedio}</h2>
+            </div>
+        );
     }
-
-
-
-
-
-render(){
-    return(
-        <div>
-            <h1>Materia: {this.props.materia}</h1>
-            Nota:<input type="text"
-            value={this.props.nota}
-            onChange={(e) => this.setState({ nota : e.target.value})}
-            />
-
-        </div>
-    )
-}
 }
